@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ sitetitle }}: {{ comic.title }}
+{% endblock %}
+
+{% block content %}
+<table id="main">
+<tr>
+  <td colspan="5" class="triangle image"><p class="triangletext">SENATVS PVLLIQVE ROMANI</p></td>
+</tr>
+<tr>
+  <td class="spacer"/>
+  <td colspan="3" class="title image"><p class="titletext">{{ comic.title|upper }}</p></td>
+  <td class="spacer"/>
+</tr>
+<tr>
+  <td class="spacer"/>
+  <td class="column image"/>
+  <td><img src="{{ comic.img_url }}" title="{{ comic.tooltip }}" alt="{{ comic.title }}" /></td>
+  <td class="column image"/>
+  <td class="spacer"/>
+</tr>
+<tr>
+  <td class="spacer"/>
+  <td colspan="3" class="nav image">{% include "includes/nav.html" %}</td>
+  <td class="spacer"/>
+</tr>
+<tr>
+  <td colspan="5" class="stairs image"><p class="stairstext">SITE THEME AND ALL MEDIA &copy; MMXII ROMAN CHICKENS, INC. -- OSS BACKEND BY <a class="stairslink link" href="http://sccms.gilgi.org">SCCMS</a></p></td>
+</tr>
+</table>
+{% endblock %}
